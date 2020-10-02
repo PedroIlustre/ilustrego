@@ -5,17 +5,16 @@ import (
 )
 
 func main() {
-	var alt =0.00
-	var peso =0.00
-	var result=0.00
+	var alt, peso, result float64
+	
 	fmt.Println("*********************************************************")
 	fmt.Println("----------------Calculadora de IMC-----------------------")
 	fmt.Println("*********************************************************")
 
 	fmt.Println("Digite sua altura em centímetros (exemplo: 1,75m = 175cm)")
-	fmt.Scanln(&alt)
+	fmt.Scan(&alt)
 	fmt.Println("Digite seu peso em gramas (exemplo: 95,80kg = 9580g)")
-	fmt.Scanln(&peso)
+	fmt.Scan(&peso)
 	result = (alt * alt) / peso
 
 	if result > 18.50 && result < 24.90 {
