@@ -6,10 +6,11 @@ import (
 	"strings"
 )
 
+
 func main() {
 	var result float64
 	var alt, p string
-
+  
 	fmt.Println("*********************************************************")
 	fmt.Println("----------------Calculadora de IMC-----------------------")
 	fmt.Println("*********************************************************")
