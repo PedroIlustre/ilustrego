@@ -7,6 +7,40 @@ import (
 )
 
 func main() {
+	var key string
+	fmt.Println("Digite qual função deseja executar:")
+	fmt.Println("1 - Exercício 1")
+	fmt.Println("2 - Exercício 2")
+	fmt.Println("3 - Exercício 3")
+	fmt.Println("4 - Exercício 4")
+	fmt.Println("5 - Calculadora IMC")
+
+	keyPress, _ := fmt.Scan(&key)
+
+	if keyPress == 1 {
+		exercicio1()
+	} else {
+		calculadoraIMC()
+	}
+}
+
+func exercicio1() {
+
+	x := 42
+	y := "James Bond"
+	z := true
+
+	fmt.Println("### Somente uma declaração de print! ###")
+	fmt.Println("O valor de x é:", x, "\n", "O valor de y é:", y, "\n", "O valor de z é:", z)
+	fmt.Println(" ")
+	fmt.Println("### Uma declaração de print por variavel! ###")
+	fmt.Println("O valor de x é:", x)
+	fmt.Println("O valor de y é:", y)
+	fmt.Println("O valor de z é:", z)
+}
+
+func calculadoraIMC() {
+
 	var result float64
 	var alt, p string
 
@@ -39,7 +73,6 @@ func main() {
 	} else {
 		fmt.Printf(" Seu IMC é %.2f", result)
 	}
-
 }
 
 // No "GO playground" deu certo, mas não deu pra ler os valores, testa no teu ambiente vê se funciona ;)
