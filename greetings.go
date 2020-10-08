@@ -6,6 +6,10 @@ import (
 	"strings"
 )
 
+var x int
+var y string
+var z bool
+
 func main() {
 	var key string
 	fmt.Println("Digite qual função deseja executar:")
@@ -15,15 +19,20 @@ func main() {
 	fmt.Println("4 - Exercício 4")
 	fmt.Println("5 - Calculadora IMC")
 
-	keyPress, _ := fmt.Scan(&key)
+	fmt.Scan(&key)
 
-	if keyPress == 1 {
+	if key == "1" {
 		exercicio1()
+	} else if key == "2" {
+		exercicio2()
 	} else {
 		calculadoraIMC()
 	}
 }
 
+/*
+
+ */
 func exercicio1() {
 
 	x := 42
@@ -37,6 +46,11 @@ func exercicio1() {
 	fmt.Println("O valor de x é:", x)
 	fmt.Println("O valor de y é:", y)
 	fmt.Println("O valor de z é:", z)
+}
+
+func exercicio2() {
+	fmt.Println(" ")
+	fmt.Print("O valor zero de x é: ", x, "\n", "O valor zero de y é: ", y, "\n", "O valor zero de z é: ", z)
 }
 
 func calculadoraIMC() {
