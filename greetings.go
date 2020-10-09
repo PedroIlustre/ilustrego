@@ -6,13 +6,14 @@ import (
 	"strings"
 )
 
-var x int
-var y string
-var z bool
+var x2 int
+var y2 string
+var z2 bool
 
 type ilustre int
 
 var pedro ilustre
+var pedro5 int
 
 func main() {
 	var key string
@@ -21,7 +22,8 @@ func main() {
 	fmt.Println("2 - Exercício 2")
 	fmt.Println("3 - Exercício 3")
 	fmt.Println("4 - Exercício 4")
-	fmt.Println("5 - Calculadora IMC")
+	fmt.Println("5 - Exercício 5")
+	fmt.Println("outro - Calculadora IMC")
 
 	fmt.Scan(&key)
 
@@ -33,6 +35,8 @@ func main() {
 		exercicio3()
 	} else if key == "4" {
 		exercicio4()
+	} else if key == "5" {
+		exercicio5()
 	} else {
 		calculadoraIMC()
 	}
@@ -40,29 +44,29 @@ func main() {
 
 func exercicio1() {
 
-	x := 42
-	y := "James Bond"
-	z := true
+	x1 := 42
+	y1 := "James Bond"
+	z1 := true
 
 	fmt.Println("### Somente uma declaração de print! ###")
-	fmt.Println("O valor de x é:", x, "\n", "O valor de y é:", y, "\n", "O valor de z é:", z)
+	fmt.Println("O valor de x é:", x1, "\n", "O valor de y é:", y1, "\n", "O valor de z é:", z1)
 	fmt.Println(" ")
 	fmt.Println("### Uma declaração de print por variavel! ###")
-	fmt.Println("O valor de x é:", x)
-	fmt.Println("O valor de y é:", y)
-	fmt.Println("O valor de z é:", z)
+	fmt.Println("O valor de x é:", x1)
+	fmt.Println("O valor de y é:", y1)
+	fmt.Println("O valor de z é:", z1)
 }
 
 func exercicio2() {
 	fmt.Println(" ")
-	fmt.Print("O valor zero de x é: ", x, "\n", "O valor zero de y é: ", y, "\n", "O valor zero de z é: ", z)
+	fmt.Print("O valor zero de x é: ", x2, "\n", "O valor zero de y é: ", y2, "\n", "O valor zero de z é: ", z2)
 }
 
 func exercicio3() {
-	x = 42
-	y = "James Bond"
-	z = true
-	s := fmt.Sprintf("Valor de x: %v \n Valor de y: %v \n Valor de z: %v", x, y, z)
+	x2 = 42
+	y2 = "James Bond"
+	z2 = true
+	s := fmt.Sprintf("Valor de x: %v \n Valor de y: %v \n Valor de z: %v", x2, y2, z2)
 	fmt.Println(s)
 }
 
@@ -71,6 +75,13 @@ func exercicio4() {
 	fmt.Printf("\n %T", pedro)
 	pedro = 42
 	fmt.Print("\n", pedro)
+}
+
+func exercicio5() {
+	exercicio4()
+	pedro5 = int(pedro)
+	fmt.Printf("\n %v", pedro)
+	fmt.Printf("\n %T", pedro5)
 }
 
 func calculadoraIMC() {
