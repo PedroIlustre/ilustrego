@@ -25,6 +25,8 @@ func main() {
 		exercicio1()
 	} else if key == "2" {
 		exercicio2()
+	} else if key == "3" {
+		exercicio3()
 	} else {
 		calculadoraIMC()
 	}
@@ -51,6 +53,14 @@ func exercicio1() {
 func exercicio2() {
 	fmt.Println(" ")
 	fmt.Print("O valor zero de x é: ", x, "\n", "O valor zero de y é: ", y, "\n", "O valor zero de z é: ", z)
+}
+
+func exercicio3() {
+	x = 42
+	y = "James Bond"
+	z = true
+	s := fmt.Sprint("O valor de x é:", x, "\n", "O valor de y é:", y, "\n", "O valor de z é:", z)
+	fmt.Println(s)
 }
 
 func calculadoraIMC() {
