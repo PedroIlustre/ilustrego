@@ -10,6 +10,10 @@ var x int
 var y string
 var z bool
 
+type ilustre int
+
+var pedro ilustre
+
 func main() {
 	var key string
 	fmt.Println("Digite qual função deseja executar:")
@@ -27,14 +31,13 @@ func main() {
 		exercicio2()
 	} else if key == "3" {
 		exercicio3()
+	} else if key == "4" {
+		exercicio4()
 	} else {
 		calculadoraIMC()
 	}
 }
 
-/*
-
- */
 func exercicio1() {
 
 	x := 42
@@ -59,8 +62,15 @@ func exercicio3() {
 	x = 42
 	y = "James Bond"
 	z = true
-	s := fmt.Sprint("O valor de x é:", x, "\n", "O valor de y é:", y, "\n", "O valor de z é:", z)
+	s := fmt.Sprintf("Valor de x: %v \n Valor de y: %v \n Valor de z: %v", x, y, z)
 	fmt.Println(s)
+}
+
+func exercicio4() {
+	fmt.Print(pedro)
+	fmt.Printf("\n %T", pedro)
+	pedro = 42
+	fmt.Print("\n", pedro)
 }
 
 func calculadoraIMC() {
