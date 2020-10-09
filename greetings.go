@@ -38,7 +38,8 @@ func main() {
 	} else if key == "5" {
 		exercicio5()
 	} else {
-		calculadoraIMC()
+		aulaBooleano()
+		//calculadoraIMC()
 	}
 }
 
@@ -84,11 +85,19 @@ func exercicio5() {
 	fmt.Printf("\n %T", pedro5)
 }
 
+func aulaBooleano() {
+	varBoleana := true
+	fmt.Println(varBoleana)
+	varBoleana = 10 > 100
+	fmt.Println(varBoleana)
+
+}
+
 func calculadoraIMC() {
 
 	var result float64
 	var alt, p string
-  
+
 	fmt.Println("*********************************************************")
 	fmt.Println("----------------Calculadora de IMC-----------------------")
 	fmt.Println("*********************************************************")
