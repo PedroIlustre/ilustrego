@@ -38,7 +38,7 @@ func main() {
 	} else if key == "5" {
 		exercicio5()
 	} else {
-		aulaString()
+		aulaNumericos(key)
 		// aulaBooleano()
 		//calculadoraIMC()
 	}
@@ -110,6 +110,15 @@ func aulaString() {
 	for i := 0; i < len(s); i++ {
 		fmt.Printf("%b - %T - %#U - %#x \n", s[i], s[i], s[i], s[i])
 	}
+}
+
+func aulaNumericos(num string) {
+	b, _ := strconv.ParseInt(num, 0, 8)
+	fmt.Printf(" Decimal %d - Binário %b - Hexa decimal: %#x", b, b, b)
+}
+
+func aulaConst() {
+	fmt.Print("Aula sobre constantes. Quando setado uma constante e não definido a tipagem dela, ela fica indefinida e somente tipaga em tempo de execução")
 }
 
 func calculadoraIMC() {
