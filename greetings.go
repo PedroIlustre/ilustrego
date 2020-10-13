@@ -95,14 +95,23 @@ func aulaBooleano() {
 }
 
 func aulaString() {
-	s := "Hello playground"
-	sb := []byte(s)
+	s := "oiç"
+	//sb := []byte(s)
 
-	for _, v := range sb {
+	// range pega caracter por caracter
+	for _, v := range s {
 		// formating verbs %v - %T - %#U - %#x do printf (format)
-		fmt.Printf("%v - %T - %#U - %#x \n", v, v, v, v)
+		fmt.Printf("%b - %T - %#U - %#x \n", v, v, v, v)
+	}
+
+	fmt.Println("")
+
+	// laço com 3 condições pega byte por byte
+	for i := 0; i < len(s); i++ {
+		fmt.Printf("%b - %T - %#U - %#x \n", s[i], s[i], s[i], s[i])
 	}
 }
+
 func calculadoraIMC() {
 
 	var result float64
