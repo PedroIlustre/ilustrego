@@ -38,7 +38,8 @@ func main() {
 	} else if key == "5" {
 		exercicio5()
 	} else {
-		aulaBooleano()
+		aulaString()
+		// aulaBooleano()
 		//calculadoraIMC()
 	}
 }
@@ -93,6 +94,15 @@ func aulaBooleano() {
 
 }
 
+func aulaString() {
+	s := "Hello playground"
+	sb := []byte(s)
+
+	for _, v := range sb {
+		// formating verbs %v - %T - %#U - %#x do printf (format)
+		fmt.Printf("%v - %T - %#U - %#x \n", v, v, v, v)
+	}
+}
 func calculadoraIMC() {
 
 	var result float64
