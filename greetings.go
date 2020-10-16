@@ -1,11 +1,10 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-	"strings"
+import ( 
+	"fmt" 
 )
 
+<<<<<<< HEAD
 var x2 int
 var y2 string
 var z2 bool
@@ -15,7 +14,12 @@ type ilustre int
 var pedro ilustre
 var pedro5 int
 
+||||||| merged common ancestors
+
+=======
+>>>>>>> 4a0382ea0d462b423c2dc4e655f4607f0baa3da6
 func main() {
+<<<<<<< HEAD
 	var key string
 	fmt.Println("Digite qual função deseja executar:")
 	fmt.Println("1 - Exercício 1")
@@ -126,34 +130,34 @@ func calculadoraIMC() {
 	var result float64
 	var alt, p string
 
+||||||| merged common ancestors
+	var result float64
+	var alt, p string
+  
+=======
+	var alt, peso, result float64
+	
+>>>>>>> 4a0382ea0d462b423c2dc4e655f4607f0baa3da6
 	fmt.Println("*********************************************************")
 	fmt.Println("----------------Calculadora de IMC-----------------------")
 	fmt.Println("*********************************************************")
 
-	fmt.Println("Digite sua altura em metros (exemplo: 1,75)")
+	fmt.Println("Digite sua altura em centímetros (exemplo: 1,75m = 175cm)")
 	fmt.Scan(&alt)
-	alt = strings.Replace(alt, ",", ".", -1)
-
-	fmt.Println("Digite seu peso em quilos (exemplo: 95,1)")
-	fmt.Scan(&p)
-	p = strings.Replace(p, ",", ".", -1)
-
-	altura, _ := strconv.ParseFloat(alt, 64)
-	peso, _ := strconv.ParseFloat(p, 64)
-	result = peso / (altura * altura)
+	fmt.Println("Digite seu peso em gramas (exemplo: 95,80kg = 9580g)")
+	fmt.Scan(&peso)
+	result = (alt * alt) / peso
 
 	if result > 18.50 && result < 24.90 {
-		fmt.Printf(" Seu IMC é %.2f. Você tem o peso normal.", result)
+		fmt.Printf(" Seu IMC é %.2f. Você tem o peso normal.",result)
 	} else if result > 25 && result < 29.99 {
-		fmt.Printf(" Seu IMC é %.2f. Você está com sobrepeso.", result)
+		fmt.Printf(" Seu IMC é %.2f. Você está com sobrepeso.",result)
 	} else if result > 30 && result < 34.90 {
-		fmt.Printf(" Seu IMC é %.2f. Você tem Obesidade Grau I .", result)
+		fmt.Printf(" Seu IMC é %.2f. Você tem Obesidade Grau I .",result)
 	} else if result > 35 && result < 39.99 {
-		fmt.Printf(" Seu IMC é %.2f. Você tem Obesidade Grau II .", result)
+		fmt.Printf(" Seu IMC é %.2f. Você tem Obesidade Grau II .",result)
 	} else if result > 40 {
-		fmt.Printf(" Seu IMC é .2%f. Você tem Obesidade Grau III, CUIDADO!!!", result)
-	} else {
-		fmt.Printf(" Seu IMC é %.2f", result)
+		fmt.Printf(" Seu IMC é %.2f. Você tem Obesidade Grau III, CUIDADO!!!",result)
 	}
 }
 
