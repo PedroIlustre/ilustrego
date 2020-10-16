@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"strings"
 )
 
 var x2 int
@@ -125,17 +126,21 @@ func calculadoraIMC() {
 	var result float64
 	var alt, p string
 
-	var alt, peso, result float64
-
 	fmt.Println("*********************************************************")
 	fmt.Println("----------------Calculadora de IMC-----------------------")
 	fmt.Println("*********************************************************")
 
-	fmt.Println("Digite sua altura em centímetros (exemplo: 1,75m = 175cm)")
+	fmt.Println("Digite sua altura em metros (exemplo: 1,75)")
 	fmt.Scan(&alt)
-	fmt.Println("Digite seu peso em gramas (exemplo: 95,80kg = 9580g)")
-	fmt.Scan(&peso)
-	result = (alt * alt) / peso
+	alt = strings.Replace(alt, ",", ".", -1)
+
+	fmt.Println("Digite seu peso em quilos (exemplo: 95,1)")
+	fmt.Scan(&p)
+	p = strings.Replace(p, ",", ".", -1)
+
+	altura, _ := strconv.ParseFloat(alt, 64)
+	peso, _ := strconv.ParseFloat(p, 64)
+	result = peso / (altura * altura)
 
 	if result > 18.50 && result < 24.90 {
 		fmt.Printf(" Seu IMC é %.2f. Você tem o peso normal.", result)
@@ -146,7 +151,9 @@ func calculadoraIMC() {
 	} else if result > 35 && result < 39.99 {
 		fmt.Printf(" Seu IMC é %.2f. Você tem Obesidade Grau II .", result)
 	} else if result > 40 {
-		fmt.Printf(" Seu IMC é %.2f. Você tem Obesidade Grau III, CUIDADO!!!", result)
+		fmt.Printf(" Seu IMC é .2%f. Você tem Obesidade Grau III, CUIDADO!!!", result)
+	} else {
+		fmt.Printf(" Seu IMC é %.2f", result)
 	}
 }
 
