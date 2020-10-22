@@ -16,32 +16,8 @@ var pedro ilustre
 var pedro5 int
 
 func main() {
-	var key string
-	fmt.Println("Digite qual função deseja executar:")
-	fmt.Println("1 - Exercício 1")
-	fmt.Println("2 - Exercício 2")
-	fmt.Println("3 - Exercício 3")
-	fmt.Println("4 - Exercício 4")
-	fmt.Println("5 - Exercício 5")
-	fmt.Println("outro - Calculadora IMC")
+	chamaExercicio()
 
-	fmt.Scan(&key)
-
-	if key == "1" {
-		exercicio1()
-	} else if key == "2" {
-		exercicio2()
-	} else if key == "3" {
-		exercicio3()
-	} else if key == "4" {
-		exercicio4()
-	} else if key == "5" {
-		exercicio5()
-	} else {
-		aulaNumericos(key)
-		// aulaBooleano()
-		//calculadoraIMC()
-	}
 }
 
 func exercicio1() {
@@ -154,6 +130,35 @@ func calculadoraIMC() {
 		fmt.Printf(" Seu IMC é .2%f. Você tem Obesidade Grau III, CUIDADO!!!", result)
 	} else {
 		fmt.Printf(" Seu IMC é %.2f", result)
+	}
+}
+
+func chamaExercicio() {
+	var key string
+	fmt.Println("Digite qual função deseja executar:")
+	fmt.Println("1 - Exercício 1")
+	fmt.Println("2 - Exercício 2")
+	fmt.Println("3 - Exercício 3")
+	fmt.Println("4 - Exercício 4")
+	fmt.Println("5 - Exercício 5")
+	fmt.Println("outro - Calculadora IMC")
+
+	fmt.Scan(&key)
+
+	if key == "1" {
+		exercicio1()
+	} else if key == "2" {
+		exercicio2()
+	} else if key == "3" {
+		exercicio3()
+	} else if key == "4" {
+		exercicio4()
+	} else if key == "5" {
+		exercicio5()
+	} else {
+		aulaNumericos(key)
+		// aulaBooleano()
+		//calculadoraIMC()
 	}
 }
 
